@@ -4,11 +4,14 @@ author: Tsiry Sandratraina
 branding:
   icon: play-circle
   color: purple
+inputs:
+  version:
+    description: Crosup version to install
+    required: false
+    default: v0.3.2
 outputs:
-  crosup-version:
-    description: The version of Crosup that was installed.
-  nix-version:
-    description: The version of Nix that was installed.
+  version:
+    description: Crosup version installed
   cache-hit:
     description: Was the install cached?
 runs:
