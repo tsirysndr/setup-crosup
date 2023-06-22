@@ -62,7 +62,7 @@ export default async (options) => {
     };
 };
 function getDownloadUrl(options) {
-    const release = encodeURIComponent(options?.version ?? "v0.4.6");
+    const release = encodeURIComponent(options?.version ?? "v0.4.7");
     const platform = {
         darwin: "apple-darwin",
         linux: "unknown-linux-gnu",
