@@ -80,7 +80,7 @@ function getDownloadUrl(options?: {
   os?: string;
   arch?: string;
 }): { url: string; cacheKey: string } {
-  const release = encodeURIComponent(options?.version ?? "v0.4.4");
+  const release = encodeURIComponent(options?.version ?? "v0.4.5");
   const platform = {
     darwin: "apple-darwin",
     linux: "unknown-linux-gnu",
