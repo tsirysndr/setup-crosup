@@ -16,5 +16,13 @@ jobs:
       - uses: actions/checkout@v2
       - name: Setup Crosup
         uses: ./
+        with:
+          packages: |
+            deno
+            zig
       - name: Verify Crosup
         run: crosup --version
+      - name: Verify Node
+        run: deno --version
+      - name: Verify Zig
+        run: zig version

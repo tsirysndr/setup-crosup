@@ -64,6 +64,11 @@ export default async (
     }
   }
 
+  if (options.packages.length > 0) {
+    action.info(`Installing packages: ${options.packages.join(", ")}`);
+    await getExecOutput(path, ["install", ...options.packages]);
+  }
+
   return {
     version,
     cacheHit,
@@ -75,7 +80,7 @@ function getDownloadUrl(options?: {
   os?: string;
   arch?: string;
 }): { url: string; cacheKey: string } {
-  const release = encodeURIComponent(options?.version ?? "v0.3.2");
+  const release = encodeURIComponent(options?.version ?? "v0.4.0");
   const platform = {
     darwin: "apple-darwin",
     linux: "unknown-linux-gnu",

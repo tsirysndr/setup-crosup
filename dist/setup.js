@@ -52,13 +52,17 @@ export default async (options) => {
             action.warning(`Failed to save the downloaded version of Crosup to the cache: ${error.message}`);
         }
     }
+    if (options.packages.length > 0) {
+        action.info(`Installing packages: ${options.packages.join(", ")}`);
+        await getExecOutput(path, ["install", ...options.packages]);
+    }
     return {
         version,
         cacheHit,
     };
 };
 function getDownloadUrl(options) {
-    const release = encodeURIComponent(options?.version ?? "v0.3.2");
+    const release = encodeURIComponent(options?.version ?? "v0.4.0");
     const platform = {
         darwin: "apple-darwin",
         linux: "unknown-linux-gnu",

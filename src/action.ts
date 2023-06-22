@@ -8,6 +8,10 @@ if (!process.env.RUNNER_TEMP) {
 
 setup({
   version: action.getInput("version"),
+  packages: action
+    .getInput("packages")
+    .split("\n")
+    .map((packageName) => packageName.trim()),
 })
   .then(({ version, cacheHit }) => {
     action.setOutput("version", version);
