@@ -20,6 +20,8 @@ jobs:
     runs-on: ubuntu-latest
     continue-on-error: true
     steps:
+      - name: Install Nix
+        uses: DeterminateSystems/nix-installer-action@v1
       - name: Setup Crosup
         uses: tsirysndr/setup-crosup@v1
         with:
