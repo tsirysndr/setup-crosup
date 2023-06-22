@@ -19,7 +19,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@v1
+        uses: DeterminateSystems/nix-installer-action@v4
       - name: Setup Crosup
         uses: ./
         with:

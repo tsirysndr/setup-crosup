@@ -21,7 +21,7 @@ jobs:
     continue-on-error: true
     steps:
       - name: Install Nix
-        uses: DeterminateSystems/nix-installer-action@v1
+        uses: DeterminateSystems/nix-installer-action@v4
       - name: Setup Crosup
         uses: tsirysndr/setup-crosup@v1
         with:
