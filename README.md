@@ -25,7 +25,7 @@ jobs:
         with:
           version: 'v0.4.0'
           packages: |
-            node
+            deno
             zig
       - name: Verify Crosup
         run: crosup --version
