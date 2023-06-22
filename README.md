@@ -23,7 +23,7 @@ jobs:
       - name: Setup Crosup
         uses: tsirysndr/setup-crosup@v1
         with:
-          version: 'v0.4.5'
+          version: 'v0.4.6'
           packages: |
             deno
             zig
