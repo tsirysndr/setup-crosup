@@ -26,11 +26,16 @@ jobs:
         uses: tsirysndr/setup-crosup@v1
         with:
           version: 'v0.4.8'
+          # Add packages to install here
           packages: |
             deno
             zig
       - name: Verify Crosup
         run: crosup --version
+      - name: Verify Deno
+        run: deno --version
+      - name: Verify Zig
+        run: zig version
 ```
 
 See [action.yml](action.yml) for the full documentation for this action's inputs and outputs.
