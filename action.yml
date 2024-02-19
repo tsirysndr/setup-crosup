@@ -14,7 +14,7 @@ inputs:
       Whitespace separated, pkgs to supplement the environment. eg.
 
       ```yaml
-      +: |
+      packages: |
         deno
         zig
       ```
